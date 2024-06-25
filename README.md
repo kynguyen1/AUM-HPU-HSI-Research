@@ -5,6 +5,11 @@ Inorder to run the code you need to build a container using one of the two defin
   1) The definition file **test_computeNode.def** is for building a container without internet connection in the node.
   2) The definition file **internetAccessRequired.def** is for building a container with internet in the node. 
 
-For building the container without internet use: 
+For building a container without internet use: 
 
   ```apptainer build test_computeNode.sif test_computeNode.def```
+
+  For building a container with internet use: 
+
+  ```apptainer build internetAccessRequired.sif internetAccessRequired.def```
+  
