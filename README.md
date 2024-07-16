@@ -22,10 +22,10 @@ In order to run the container using a batch file:
      
      ```apptainer exec --bind ./data:/mnt,./:/images test_computeNode.sif conda run -n myenv python /workspace/main.py --model nn --dataset AUM2 --training_sample 0.95 --runs 1 > cpu_nn_1_AUM2_0.95.txt```
 
-    Then, run this in the command line:
-    Select the appropriate cpu nodes for each batch file:
+     Then, run this in the command line:
+     Select the appropriate cpu nodes for each batch file:
     
-      ```sbatch --nodelist=cnode2 cpu_batchFile.sh```
+     ```sbatch --nodelist=cnode2 cpu_batchFile.sh```
     
   3) To run in a GPU node use the script ***gpu_batchFile.sh*** (located in the folder ***batch_files***):
      
@@ -33,10 +33,10 @@ In order to run the container using a batch file:
      
      ```apptainer exec --nv --bind ./data:/mnt,./:/images test_computeNode.sif conda run -n myenv python /workspace/main.py --model nn --dataset AUM --training_sample 0.95 --runs 1 --cuda 0 > gpu_nn_1_AUM_0.95.txt```
 
-    Then, run this in the command line:
-    Select the appropriate gpu nodes for each batch file:
+     Then, run this in the command line:
+     Select the appropriate gpu nodes for each batch file:
     
-      ```sbatch --nodelist=thor gpu_batchFile.sh```
+     ```sbatch --nodelist=thor gpu_batchFile.sh```
   
 
 
