@@ -13,9 +13,11 @@ For building a container without internet use:
 
   ```apptainer build internetAccessRequired.sif internetAccessRequired.def```
 
-  To run the container from the command line use:
+  To run the container from the compute (CPU) nodes using the command line use:
 
   ```apptainer exec --bind ./data:/mnt,./:/images test_computeNode.sif conda run -n myenv python /workspace/main.py --model nn --dataset AUM --training_sample 0.95 --runs 1 > nn_1_AUM_0.95.txt```
+
+  
 
 
   
