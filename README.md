@@ -17,13 +17,13 @@ In order to run the code you need to build a container using one of the two defi
 In order to run the container using a batch file:
   1) To run in a CPU node from the Login node using the command line:
      
-     ```srun --partition=cs --nodes=1 nohup apptainer exec --bind ./data:/mnt,./:/images test_computeNode.sif conda run -n myenv python /workspace/main.py --model nn --dataset AUM2 --training_sample 0.95 --runs 1 > nn_1_AUM2_0.95.txt```
+     ```srun --partition=cs --nodes=1 nohup apptainer exec --bind ./data:/mnt,./:/images test_computeNode.sif conda run -n myenv python /workspace/main.py --model nn --dataset IndianPines --training_sample 0.95 --runs 1 > nn_1_IndianPines_0.95.txt```
     
   2) To run in a CPU node use the script ```cpu_batchFile.sh``` (located in the folder ```batch_files```):
      
      For each model and dataset the script needs to be properly modified like so:
      
-     ```apptainer exec --bind ./data:/mnt,./:/images test_computeNode.sif conda run -n myenv python /workspace/main.py --model nn --dataset AUM2 --training_sample 0.95 --runs 1 > cpu_nn_1_AUM2_0.95.txt```
+     ```apptainer exec --bind ./data:/mnt,./:/images test_computeNode.sif conda run -n myenv python /workspace/main.py --model nn --dataset IndianPines --training_sample 0.95 --runs 1 > cpu_nn_1_IndianPines_0.95.txt```
 
      Then, run this in the command line:
      Select the appropriate cpu nodes for each batch file:
@@ -34,7 +34,7 @@ In order to run the container using a batch file:
      
      For each model and dataset the script needs to be properly modified like so:
      
-     ```apptainer exec --nv --bind ./data:/mnt,./:/images test_computeNode.sif conda run -n myenv python /workspace/main.py --model nn --dataset AUM --training_sample 0.95 --runs 1 --cuda 0 > gpu_nn_1_AUM_0.95.txt```
+     ```apptainer exec --nv --bind ./data:/mnt,./:/images test_computeNode.sif conda run -n myenv python /workspace/main.py --model nn --dataset IndianPines --training_sample 0.95 --runs 1 --cuda 0 > gpu_nn_1_IndianPines_0.95.txt```
 
      Then, run this in the command line:
      Select the appropriate gpu nodes for each batch file:
