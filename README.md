@@ -25,7 +25,7 @@ In order to run the container using a batch file:
     Then, run this in the command line:
     Select the appropriate cpu nodes for each batch file:
     
-     ```sbatch --nodelist=cnode2 cpu_batchFile.sh```
+      ```sbatch --nodelist=cnode2 cpu_batchFile.sh```
     
   3) To run in a GPU node use the script ***gpu_batchFile.sh*** (located in the folder ***batch_files***):
      
@@ -36,7 +36,7 @@ In order to run the container using a batch file:
     Then, run this in the command line:
     Select the appropriate gpu nodes for each batch file:
     
-     ```sbatch --nodelist=thor gpu_batchFile.sh```
+      ```sbatch --nodelist=thor gpu_batchFile.sh```
   
 
 
