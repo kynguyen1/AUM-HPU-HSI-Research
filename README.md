@@ -1,7 +1,7 @@
 # AUM-HPU-HSI-Research
 Modified DeepHyperX toolbox including the threeLayer Model
 
-## Buidling the container 
+## Building the container 
 
 In order to run the code you need to build a container using one of the two definition files located in the ```definition_files``` folder. 
   1) The definition file ```test_computeNode.def``` is for building a container in a node **without** internet connection. Use:
